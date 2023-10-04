@@ -28,6 +28,8 @@ const injectRoutes = (api) => {
   // Files Task 6
   api.get('/files/:id', xTokenAuthenticate, FilesController.getShow);
   api.get('/files', xTokenAuthenticate, FilesController.getIndex);
+
+  // Files Task 7
   api.put('/files/:id/publish', xTokenAuthenticate, FilesController.putPublish);
   api.put('/files/:id/unpublish', xTokenAuthenticate, FilesController.putUnpublish);
   api.get('/files/:id/data', FilesController.getFile);
