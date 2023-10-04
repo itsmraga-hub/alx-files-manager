@@ -24,6 +24,8 @@ const injectRoutes = (api) => {
 
   // Files
   api.post('/files', xTokenAuthenticate, FilesController.postUpload);
+
+  // Files Task 6
   api.get('/files/:id', xTokenAuthenticate, FilesController.getShow);
   api.get('/files', xTokenAuthenticate, FilesController.getIndex);
   api.put('/files/:id/publish', xTokenAuthenticate, FilesController.putPublish);
