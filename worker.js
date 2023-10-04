@@ -60,23 +60,20 @@ userQueue.process(async (job, done) => {
   if (!user) {
     throw new Error('User not found');
   }
-/*
+
   try {
-    const mailSubject = 'Welcome to ALX-Files_Manager by William Raga';
-    const mailContent = [
+    const subject = 'Welcome to alx files manager developed by William Raga';
+    const content = [
       '<div>',
       '<h3>Hello {{user.name}},</h3>',
       'Welcome to <a href="https://github.com/itsmraga-hub/alx-files_manager">',
       'ALX-Files_Manager</a>, ',
-      'a simple file management API built with Node.js by ',
       '<a href="https://github.com/itsmraga-hub">William Raga</a>. ',
-      'We hope it meets your needs.',
       '</div>',
     ].join('');
-    Mailer.sendMail(Mailer.buildMessage(user.email, mailSubject, mailContent));
+    Mailer.sendMail(Mailer.buildMessage(user.email, subject, content));
     done();
   } catch (err) {
     done(err);
   }
-*/
 });
